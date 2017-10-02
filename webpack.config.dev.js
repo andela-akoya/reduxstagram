@@ -17,18 +17,17 @@ export default  {
   ],
   module: {
     loaders: [
-    // js
-    {
-      test: /\.js$/,
-      loaders: ['babel-loader', 'react-hot-loader'],
-      include: path.join(__dirname, 'client')
-    },
-    // CSS
-    { 
-      test: /\.styl$/, 
-      include: path.join(__dirname, 'client'),
-      loader: 'style-loader!css-loader!stylus-loader'
-    }
+      // js
+      {
+        test: /\.js$/,
+        include: path.join(__dirname, 'client'),
+        loaders: ['react-hot-loader', 'babel-loader']
+      },
+      // CSS
+      {
+        test: /\.styl$/,
+        loaders: ['style-loader','css-loader', 'stylus-loader']
+      }
     ]
   }
 };
