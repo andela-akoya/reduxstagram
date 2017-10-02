@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
 
 const Photo = (props) => {
-  const { post, comments } = props;
+  const { post, comments, i, increment } = props;
   return (
     <figure className="grid-figure">
       <div className="grid-photo-wrap">
@@ -22,7 +22,7 @@ const Photo = (props) => {
       <figcaption>
         <p>{post.caption} </p>
         <div className="control-buttons">
-          <button className="likes">&hearts; {post.likes} </button>
+          <button className="likes" onClick={increment.bind(null, i)}>&hearts; {post.likes} </button>
           <Link className="button" to={`/view/${post.code}`}>
             <span className="comment-count">
               <span className="speech-bubble">  </span>
