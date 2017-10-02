@@ -3,12 +3,12 @@
  */
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Main from './components/Main';
+import App from './components/App';
 
 const Routes = () => {
   return (
     <Switch>
-      <Route path="/" component={Main}/>
+      <Route path="/" component={App}/>
     </Switch>
   )
 };
